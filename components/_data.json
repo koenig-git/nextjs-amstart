@@ -1,0 +1,33 @@
+{
+    "headerData": {
+      "links": [
+        {"title": "Über uns", "menuSlug": "ueber-uns", "url": "/ueber-uns.html"},
+        {"title": "Mitwirken", "menuSlug": "mitwirken", "url": "/mitwirken.html"},
+        {"title": "Fördern", "menuSlug": "foerdern", "url": "/foerdern.html"},
+        {"title": "Blog", "menuSlug": "blog", "url": "/blog.html"},
+        {"title": "Kontakt", "menuSlug": "kontakt", "url": "/kontakt.html"}
+      ]
+    },
+    "footerData": {
+      "links": [
+        {"title": "Kontakt", "url": "/kontakt.html"},
+        {"title": "Notfallhilfe", "url": "/notfaelle.html"},
+        {"title": "Datenschutzerklärung", "url": "/datenschutz.html"},
+        {"title": "Impressum", "url": "/impressum.html"},
+        {"title": "Quellen", "url": "/quellen.html"}
+      ],
+      "socialLinks": [
+        {"iconName": "social-instagram.svg", "title": "Instagram", "url": "https://www.instagram.com/gemeinsam_amstart/"},
+        {"iconName": "social-linkedin.svg", "title": "LinkedIn", "url": "https://www.linkedin.com/company/gemeinsamamstart/"},
+        {"iconName": "social-facebook.svg", "title": "Facebook", "url": "https://www.facebook.com/gemeinsamamstart"},
+        {"iconName": "social-spotify.svg", "title": "Spotify", "url": "https://open.spotify.com/show/3ri3cgAd3EKeCtNgFnv6yl"}
+      ]
+    },
+    "cookieBannerData": {
+      "text": "Auch aMStart backt Kekse. <br/>Für einen optimalen Besuch benutzen wir Cookies. Näheres dazu findest Du in unserer <a href='https://www.asmtart.net/datenschutz.html'>Datenschutzerklärung</a>. Okay?",
+      "buttons": [
+        {"title": "Ablehnen", "url": "javascript:gaOptoutNoMessage();window.location.reload();", "type": "secondary"},
+        {"title": "Okay", "url": "javascript:gaOptin();window.location.reload();", "type": "secondary"}
+      ]
+    }
+  }

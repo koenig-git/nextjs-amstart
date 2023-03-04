@@ -33,7 +33,6 @@ export async function getStaticProps() {
     for (var [id, block] of Object.entries(recordMap.block)) {
       let blockProperties = block.value.properties;
       if (block.value.type == 'page' && SLUG_ID in blockProperties) {
-        console.log(id);
         posts.push({
           'pid': id,
           'title': blockProperties.title[0][0],
@@ -52,14 +51,7 @@ export async function getStaticProps() {
 
 function HomePage({ posts, recordMap }) {
   return (
-    <Layout>
-      {/* {posts.map((post) => (
-        <Link href="blog/[slug]" as={`blog/${post.slug}`}>
-          <div>{post.title}</div>
-        </Link>
-      ))} */}
-    
-   
+    <Layout>   
     <Segment color="white">
       <h1 className="text-4xl font-bold">Blog</h1>
       <div className="text-2xl text-gray-600">Here is some content</div>

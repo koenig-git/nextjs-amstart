@@ -5,7 +5,7 @@ const links = [
     {"title": "Über uns", "menuSlug": "ueber-uns", "url": "/ueber-uns.html"},
     {"title": "Mitwirken", "menuSlug": "mitwirken", "url": "/mitwirken.html"},
     {"title": "Fördern", "menuSlug": "foerdern", "url": "/foerdern.html"},
-    // {"title": "Blog", "menuSlug": "blog", "url": "/blog.html"},
+    {"title": "Blog", "menuSlug": "blog", "url": "/blog.html"},
     {"title": "Kontakt", "menuSlug": "kontakt", "url": "/kontakt.html"}
 ]
 
@@ -36,6 +36,7 @@ export default function Header () {
                             {item.title}
                         </a>
                     ))}
+                    {/* TODO: check menSlug & copy to mobile version */}
         {/*             {%- for link in globalData.headerData.links -%}
                     <a href="{{linkPrefix}}{{ link.url }}" 
                        className={styles["header-desktop-link{% if link.menuSlug == menuSlug %} is-active{% endif %}"]}>

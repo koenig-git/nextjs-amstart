@@ -8,12 +8,14 @@ import Link from 'next/link';
 const name = 'aMStart';
 export const siteTitle = 'aMStart - jung, digital, unabhängig'; //TODO: SEO
 
-export default function Layout({ children, home }) {
+export default function Layout({ children}) {
   return (
     <>
       <Header/>
-      <main>{children}</main>
-      <Footer/>
+      <main>
+          {children}
+      </main>
+      {/* <Footer/> */}
     </>
   );
 }

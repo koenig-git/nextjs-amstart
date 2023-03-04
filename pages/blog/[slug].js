@@ -1,8 +1,10 @@
 import { NotionRenderer } from "react-notion-x";
+import { Collection } from 'react-notion-x/build/third-party/collection'
 import Layout from "../../components/layout";
 import Segment from "../../components/segment";
 
-import { NotionAPI } from 'notion-client'
+
+import { NotionAPI } from 'notion-client';
 
 const notion = new NotionAPI();
 
@@ -16,8 +18,8 @@ export async function getStaticProps({ params: { slug } }) {
   const post = posts.find((t) => t.slug === slug);
 
   const recordMap = await notion.getPage(post.id);
-  
-    return {
+
+  return {
       props: {
         post,
         recordMap
@@ -32,7 +34,7 @@ export default ({ post, recordMap }) => (
         <div className="max-w-4xl m-auto b">
           <h1 className="text-2xl md:text-3xl font-bold">{post.title}</h1>
           <br/>
-          <NotionRenderer recordMap={recordMap}/>
+          <NotionRenderer recordMap={recordMap} components={{Collection}}/>
         </div>
     </Segment>  
   </Layout>

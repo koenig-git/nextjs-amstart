@@ -13,6 +13,7 @@ import { getAllPosts } from './'
 export async function getStaticProps({ params: { slug } }) {
   // Get all posts again
   const posts = await getAllPosts();
+  console.log(posts)
 
   // Find the current blogpost by slug
   const post = posts.find((t) => t.slug === slug);
@@ -32,7 +33,7 @@ export default ({ post, recordMap }) => (
   <Layout>
     <Segment color="white">
         <div className="max-w-4xl m-auto b">
-          <h1 className="text-2xl md:text-3xl font-bold">{post.title}</h1>
+          {/* <h1 className="text-2xl md:text-3xl font-bold">{post.title}</h1> */}
           <br/>
           <NotionRenderer recordMap={recordMap} components={{Collection}}/>
         </div>

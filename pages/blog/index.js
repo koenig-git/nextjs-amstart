@@ -34,7 +34,7 @@ export async function getStaticProps() {
       let blockProperties = block.value.properties;
       if (block.value.type == 'page' && SLUG_ID in blockProperties) {
         posts.push({
-          'pid': id,
+          'id': id,
           'title': blockProperties.title[0][0],
           'slug': blockProperties[SLUG_ID][0][0],
           'date': ((DATE_ID in blockProperties) ? blockProperties[DATE_ID][0][1][0][1].start_date : '')

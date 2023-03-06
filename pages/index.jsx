@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import Segment from '../components/segment';
+import Intro from '../components/segments/intro';
+import Nicht_Allein from '../components/segments/nicht_allein';
 
 export default function Home() {
   return (
@@ -9,16 +11,12 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
 
-      <Segment color='green-secondary'>
-        <h1 className="text-3xl font-bold underline">Wir sind mit Dir aMStart.</h1>
-        <h2>Tausch Dich hier 1:1 mit jungen Erwachsenen aus, die Erfahrungen mit der Diagnose Multiple Sklerose gemacht haben. Lorem Ipsum dolor sit amet. Eliqum eriat est. Dixit meanerit.<a href="#beschreibung">Erfahre mehr...</a></h2>
-      </Segment>
+      <Intro/>
 
-      <Segment color='green-light'>
-        <h1 className="text-3xl font-bold underline">Wir sind mit Dir aMStart.</h1>
-        <h2>Tausch Dich hier 1:1 mit jungen Erwachsenen aus, die Erfahrungen mit der Diagnose Multiple Sklerose gemacht haben. Lorem Ipsum dolor sit amet. Eliqum eriat est. Dixit meanerit.<a href="#beschreibung">Erfahre mehr...</a></h2>
-      </Segment>
+      <Nicht_Allein/>
       
+      <Segment color="green-secondary" />
+
     </Layout>
   );
 }

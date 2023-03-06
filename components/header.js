@@ -13,7 +13,7 @@ const links = [
 
 export default function Header () {
     return (
-        <nav className="bg-green-light">
+        <nav className="bg-green-light sticky top-0 z-50">  {/* TODO: Handle white space overscrolling */}
             <div className="flex items-center justify-between px-12 lg:px-18 xl:px-24 h-24.5 lg:h-25">
                 <div className="flex-0">
                     <Link href="/">

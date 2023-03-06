@@ -5,5 +5,5 @@ import "../styles/react-notion.css";
 // import "prismjs/themes/prism-tomorrow.css";
 
 export default function App({ Component, pageProps }) {
-    return <Component {...pageProps} />;
+    return <Component {...pageProps}/>;
   }

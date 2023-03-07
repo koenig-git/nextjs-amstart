@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const footerData = {
     "links": [
-      {"title": "Kontakt", "url": "/kontakt.html"},
-      {"title": "Newsletter", "url": "/newsletter.html"},
-      {"title": "Notfallhilfe", "url": "/notfaelle.html"},
-      {"title": "Datenschutzerklärung", "url": "/datenschutz.html"},
-      {"title": "Impressum", "url": "/impressum.html"},
-      {"title": "Quellen", "url": "/quellen.html"}
+      {"title": "Kontakt", "url": "/kontakt"},
+      {"title": "Newsletter", "url": "/newsletter"},
+      {"title": "Notfallhilfe", "url": "/notfaelle"},
+      {"title": "Datenschutzerklärung", "url": "/datenschutz"},
+      {"title": "Impressum", "url": "/impressum"},
+      {"title": "Quellen", "url": "/quellen"}
     ],
     "socialLinks": [
       {"iconName": "social-instagram.svg", "title": "Instagram", "url": "https://www.instagram.com/gemeinsam_amstart/"},

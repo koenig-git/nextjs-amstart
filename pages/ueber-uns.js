@@ -187,8 +187,8 @@ export default () => {
         </div>
     </div>
 
-        {/* Section 1 */}
-        <div className="p-12 lg:p-18 xl:p-24 bg-white">
+    {/* Section 3 */}
+    <div className="p-12 lg:p-18 xl:p-24 bg-white">
       <div className="flex space-x-3 items-center text-lg leading-6">
         < div className="w-1/2">
             <h1 className="mb-6 font-extrabold text-3xl">Was wir können.</h1>

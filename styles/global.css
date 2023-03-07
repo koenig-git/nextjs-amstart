@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-button-prev, .swiper-button-next {
+  font-weight: 900;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000 /*, -1px 1px 0 #000, 1px 1px 0 #000; */
+
+}
 
 @font-face {
   font-family: 'Open Sans';

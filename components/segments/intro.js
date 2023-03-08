@@ -1,5 +1,3 @@
-import Segment from "../segment";
-
 export default function Intro() {
     return (
 

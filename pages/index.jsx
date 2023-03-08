@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import Segment from '../components/segment';
 import Intro from '../components/segments/intro';
 import Nicht_Allein from '../components/segments/nicht_allein';
+import Wer_Redet from '../components/segments/wer_redet_mit_dir';
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
 
       <Nicht_Allein/>
       
-      <Segment color="green-secondary" />
+      <Wer_Redet/>
 
     </Layout>
   );

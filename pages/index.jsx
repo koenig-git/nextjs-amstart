@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import Segment from '../components/segment';
 import Denkpart from '../components/segments/denkpart';
+import Gespraech_Vereinbaren from '../components/segments/gespraech_vereinbaren';
 import Intro from '../components/segments/intro';
 import Nicht_Allein from '../components/segments/nicht_allein';
 import Wer_Redet from '../components/segments/wer_redet_mit_dir';
@@ -19,7 +20,7 @@ export default function Home() {
       
       <Wer_Redet/>
 
-      <Segment color="green-primary" />
+      <Gespraech_Vereinbaren />
 
       <Denkpart />
 

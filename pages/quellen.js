@@ -14,7 +14,7 @@ export default function Quellen() {
                 <h1 className="mb-6 font-extrabold text-3xl">Quellen</h1>
                 <ol className="list-decimal list-inside"> 
                     {quellen.map((item) => (
-                        <li className="mt-3 text-lg xl:text-2xl">
+                        <li className="mt-3 text-lg">
                             {item.text}
                             <br/>
                             <a 

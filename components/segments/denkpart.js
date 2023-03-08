@@ -52,6 +52,7 @@ export default function Denkpart () {
             modules={[Navigation, A11y]}
             spaceBetween={0}
             slidesPerView={1}
+            loop={true}
             navigation
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
@@ -63,7 +64,7 @@ export default function Denkpart () {
                 <div className='bg-yellow px-10 bg-clip-content !h-full'>
                     <div className='flex p-10 justify-between space-x-6 !h-full'>
                     <div className='w-1/2'>
-                        <img src={dp.src} className="rounded-full m-auto object-contain max-h-[400px]"/>
+                        <img src={dp.src} className="rounded-full m-auto object-contain max-h-[320px]"/>
                     </div>
                     <div className='w-1/2 space-y-3 text-left h-full'>
                         <h3 className="text-2xl font-extrabold">{dp.name}</h3>

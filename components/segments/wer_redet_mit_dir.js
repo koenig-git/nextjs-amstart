@@ -30,8 +30,9 @@ export default function Wer_Redet () {
             <h2 className="mb-6 font-extrabold text-3xl">Wer redet mir dir?</h2>
             <p className={paragraphStyle}>Unsere Gesprächspartner*innen sind Menschen mit MS und Angehörige. Wir achten auf Deine Bedürfnisse, hören Dir zu, verstehen Dich und teilen auf Deinen Wunsch eigene Erfahrungen.</p>
             <p className={paragraphStyle}>Medizinischen oder rechtlichen Rat leisten wir nicht. Alle unsere Gesprächspartner*innen durchlaufen Auswahl- und Schulungsformate, die wir mit Psycholog*innen entwickelt haben.</p>
-            <p className={paragraphStyle}>Hier findest du Beispiele unserer bundesweiten Gesprächspartner*innen.</p>
-
+            <p className={paragraphStyle}>Hier findest du Beispiele unserer bundesweiten Gesprächspartner*innen:</p>
+            <br/>
+            <br/>
 
             <Swiper
             style={{
@@ -42,6 +43,7 @@ export default function Wer_Redet () {
                 1024: {slidesPerView:2}
             }}
             modules={[Navigation, A11y]}
+            loop={true}
             spaceBetween={0}
             slidesPerView={1}
             navigation

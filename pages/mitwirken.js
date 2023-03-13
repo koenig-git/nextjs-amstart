@@ -2,7 +2,7 @@ import Layout from "../components/layout"
 
 export default function Kontakt () {
     return (
-    <Layout>
+    <Layout currentHref={"/mitwirken"}>
     <div className="p-12 lg:p-18 xl:p-24 bg-white">
         <div className="flex space-x-3 text-lg leading-6">
 

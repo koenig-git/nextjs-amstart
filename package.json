@@ -2,10 +2,11 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "export": "next build && next export",
-        "push": "cp -r out/* ../dev-ams && git add . && git commit -m 'auto-build' && git push origin" 
+        "export": "next build && next export"
     },
     "dependencies": {
+        "@headlessui/react": "^1.7.13",
+        "@heroicons/react": "^2.0.16",
         "next": "^13.2.3",
         "notion-client": "^6.16.0",
         "react": "^18.2.0",

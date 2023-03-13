@@ -1,7 +1,6 @@
 import { NotionRenderer } from "react-notion-x";
 import { Collection } from 'react-notion-x/build/third-party/collection'
 import Layout from "../../components/layout";
-import Segment from "../../components/segment";
 import { NotionAPI } from 'notion-client';
 const notion = new NotionAPI();
 
@@ -26,7 +25,7 @@ export async function getStaticProps({ params: { slug } }) {
 
 
 export default ({ post, recordMap }) => (
-  <Layout>
+  <Layout currentHref={"/blog"}>
     <div className="p-10 lg:p-12 xl:p-16 bg-white">
       <div className="max-w-3xl m-auto b">
         <img src={post?.cover} className="object-scale-down w-full mb-3" />

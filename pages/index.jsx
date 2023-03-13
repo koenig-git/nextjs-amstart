@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import Segment from '../components/segment';
 import Denkpart from '../components/segments/denkpart';
 import Gespraech_Vereinbaren from '../components/segments/gespraech_vereinbaren';
 import Intro from '../components/segments/intro';
@@ -10,7 +9,7 @@ import Netzwerk from '../components/segments/netzwerk';
 
 export default function Home() {
   return (
-    <Layout home>
+    <Layout currentHref="">
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -25,7 +24,7 @@ export default function Home() {
 
       <Denkpart />
       
-      <Segment color="green-light"/>
+      <div className="p-12 lg:p-18 xl:p-24 bg-green-light"></div>
 
       <Netzwerk />
 

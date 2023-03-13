@@ -1,8 +1,9 @@
-import Layout from "../components/layout"
+import Header from "../components/header"
 
 export default function Kontakt () {
     return (
-    <Layout currentHref={"/kontakt"}>
+    <div>
+    <Header />
     <div className="p-12 lg:p-18 xl:p-24 bg-white">
         <div className="max-w-fit text-lg">
             <h1 className="mb-6 font-extrabold text-3xl">Kontakt</h1>
@@ -18,5 +19,5 @@ export default function Kontakt () {
             </div>
         </div>
     </div>
-    </Layout>
+    </div>
 )}

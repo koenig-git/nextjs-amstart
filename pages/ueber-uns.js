@@ -12,7 +12,7 @@ import Layout from '../components/layout';
 
 export default () => {
   return (
-    <Layout>
+    <Layout currentHref={"/ueber-uns"}>
     {/* Section 1 */}
     <div className="p-12 lg:p-18 xl:p-24 bg-white">
       <div className="flex space-x-3 items-center text-lg leading-6">

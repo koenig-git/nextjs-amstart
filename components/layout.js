@@ -8,10 +8,10 @@ import Link from 'next/link';
 const name = 'aMStart';
 export const siteTitle = 'aMStart - jung, digital, unabhängig'; //TODO: SEO
 
-export default function Layout({ children}) {
+export default function Layout({currentHref, children}) {
   return (
     <>
-      <Header/>
+      <Header currentHref={currentHref}/>
       <main>
           {children}
       </main>

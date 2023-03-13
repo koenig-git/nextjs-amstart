@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Layout from "../../components/layout";
-import Segment from "../../components/segment";
 import { getAllPosts } from "../../lib/notion-call";
 
 // available colors: blue orange green pink brown red yellow default purple gray
@@ -24,8 +23,8 @@ export async function getStaticProps() {
 
 function HomePage({ posts }) {
   return (
-    <Layout>   
-    <Segment color="white">
+    <Layout currentHref={"/blog"}>   
+    <div className="p-12 lg:p-18 xl:p-24 bg-white">
       <h1 className="text-4xl mb-3 font-bold">Unser Kompass zur MS</h1>
       <div className="text-xl text-gray-600">Der Umgang mit Multipler Sklerose ist nicht leicht. Hier findest Du die besten Tipps und Erfahrungsberichte von Expert*innen, Ärzt*innen und aus der Community:</div>
       <br></br>
@@ -94,7 +93,7 @@ function HomePage({ posts }) {
         </div>
       </div>
 
-    </Segment>
+    </div>
 
 
 

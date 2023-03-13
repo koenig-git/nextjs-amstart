@@ -1,4 +1,3 @@
-import Segment from "./segment";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -21,7 +20,7 @@ const footerData = {
 
 export default function Footer () {
     return (
-        <Segment color='green-light'>
+        <div className="p-12 lg:p-18 xl:p-24 bg-green-light">
             <footer className="flex justify-between">
                 <div className="flex-0 px-[50px] w-1/2">
                     <Link href="/">
@@ -68,6 +67,6 @@ export default function Footer () {
 
 
             </footer>
-        </Segment>
+        </div>
     )
 }

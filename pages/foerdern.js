@@ -8,7 +8,7 @@ const quellen = [
 
 export default function Foerdern() {
     return (
-        <Layout>
+        <Layout currentHref={"/foerdern"}>
             <div className="p-12 lg:p-18 xl:p-24 bg-white">
                 <div className="w-2/3 space-y-5 text-lg">
                     <h1 className="mb-6 font-extrabold text-3xl">Werde Förder*in</h1>

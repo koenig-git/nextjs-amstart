@@ -2,7 +2,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "export": "next build && next export"
+        "export": "next build && next export",
+        "push": "cp -r out/* ../dev-ams && git add . && git commit -m 'auto-build' && git push origin" 
     },
     "dependencies": {
         "next": "^13.2.3",

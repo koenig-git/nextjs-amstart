@@ -1,21 +1,7 @@
 import Link from "next/link";
 import Layout from "../../components/layout";
 import Segment from "../../components/segment";
-import { NotionRenderer } from "react-notion-x";
-import { Collection } from "react-notion-x/build/third-party/collection";
-
-import { formatDate, getBlockTitle, getPageProperty } from 'notion-utils'
-
-// const SLUG_ID = "3x=Q";
-// const DATE_ID = "S)s,";
-const SLUG_ID = "I`Q{";
-const LENGTH_ID = "zE]A";
-const READER_TAG = "CXv[";
-
-// const NOTION_BLOG_ID = 'a77b23577e1d47a9b06cba6e0202369d';
-// const NOTION_BLOG_ID = '1099525da7e5405c961706de56622ccd';
-const NOTION_BLOG_ID = '0fce51353967410995e7f7f4f27d4d77';
-
+import { getAllPosts } from "../../lib/notion-call";
 
 // available colors: blue orange green pink brown red yellow default purple gray
 const TAG_MAP = {
@@ -26,57 +12,22 @@ const TAG_MAP = {
 }
 
 
-
-
-import { NotionAPI } from 'notion-client';
-const notion = new NotionAPI();
-
-
-export const getAllPosts = async () => {
-	return await fetch(
-    `https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`
-  ).then((res) => res.json());
-}
-
-//TODO: Export so getAllPosts is no longer needed
-
 export async function getStaticProps() {
-  //getRecordMap
-  const recordMap = await notion.getPage(NOTION_BLOG_ID);
-
-  //getTableOfPages 
-    let posts = [];
-    for (var [id, block] of Object.entries(recordMap.block)) {
-      let blockProperties = block.value.properties;
-      if (block.value.type == 'page' && SLUG_ID in blockProperties) {
-        // console.log(block.value.properties)
-        posts.push({
-          'id': id,
-          'title': blockProperties.title[0][0],
-          'slug': blockProperties[SLUG_ID][0][0],
-          // 'date': ((DATE_ID in blockProperties) ? blockProperties[DATE_ID][0][1][0][1].start_date : ''),
-          'cover': ((block.value.format.page_cover) ? block.value.format.page_cover : ''),
-          'length': blockProperties[LENGTH_ID][0][0],
-          'textArt': blockProperties[READER_TAG][0][0].split(",")
-        })
-      }
-    }
-
-    // console.log(posts)
+  const posts = await getAllPosts();
 
   return {
     props: {
-      posts, recordMap
+      posts
     },
   };
 }
 
-function HomePage({ posts, recordMap }) {
+function HomePage({ posts }) {
   return (
     <Layout>   
     <Segment color="white">
-      <h1 className="text-4xl font-bold">Blog</h1>
-      <div className="text-2xl text-gray-600">Here is some content</div>
+      <h1 className="text-4xl mb-3 font-bold">Unser Kompass zur MS</h1>
+      <div className="text-xl text-gray-600">Der Umgang mit Multipler Sklerose ist nicht leicht. Hier findest Du die besten Tipps und Erfahrungsberichte von Expert*innen, Ärzt*innen und aus der Community:</div>
       <br></br>
       
       {/* <NotionRenderer recordMap={recordMap} components={{Collection}}/> */}
@@ -143,26 +94,6 @@ function HomePage({ posts, recordMap }) {
         </div>
       </div>
 
-      {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
-        {posts.map(post => (
-          <div key={post.slug} className="">
-          <Link href="blog/[slug]" as={`blog/${post.slug}`}>
-            <div className="rounded h-72 bg-green-light hover:bg-green">   
-              
-              <div className="rounded-t h-2/3 bg-green-secondary justify-items-center">
-                <img src={post.cover} className="object-fill"/>
-              </div>
-              
-              <div className="h-1/3 p-2">
-                <div className="font-bold">{post.title}</div>
-                <div>Lorem Ipsum dolor sit amet. Eliumqam est.</div>
-              </div>
-              
-            </div>
-          </Link>
-          </div>
-        ))}
-      </div> */}
     </Segment>
 
 
